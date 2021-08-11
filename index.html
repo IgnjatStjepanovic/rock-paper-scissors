@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>RPS Game</title>
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1 class="rpstitle">ROCK, PAPER, SCISSORS!</h1>
+        <h1>Round:</h1>
+      </header>
+      <div class="playingfield">
+        <div id="humanplayer" class="whitebox">
+          <h1>Player 1</h1>
+          <div class="playsymbols">
+            <div value="rock">
+              <img id="playerrock" src="rock.png" alt="rockimg" />
+            </div>
+            <div value="paper">
+              <img id="playerpaper" src="paper.png" alt="paperimg" />
+            </div>
+            <div value="scissor">
+              <img id="playerscissor" src="scissor.png" alt="scissorimg" />
+            </div>
+          </div>
+          <h3></h3>
+        </div>
+        <div class="statusinmiddle">VS</div>
+        <div id="cpuplayer" class="whitebox">
+          <h1 id="gamename">CPU player</h1>
+        </div>
+      </div>
+      <div class="scorebox">
+          <h1>0</h1>
+          <div></div>
+          <h1>0</h1>
+      </div>
+      <div class="resetbuttondiv">
+          <h3>Reset</h3>
+      </div>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+  </body>  
+</html>
