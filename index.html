@@ -15,20 +15,35 @@
     <div class="app">
       <header>
         <h1 class="rpstitle">ROCK, PAPER, SCISSORS!</h1>
-        <h1>Round:</h1>
+        <h1 id="roundtitle">Round: <span id="roundnumber">0</span></h1>
       </header>
       <div class="playingfield">
         <div id="humanplayer" class="whitebox">
           <h1>Player 1</h1>
           <div class="playsymbols">
             <div value="rock">
-              <img class="playersymbol" id="playerrock" src="rock.png" alt="rockimg" />
+              <img
+                class="playersymbol"
+                id="playerrock"
+                src="rock.png"
+                alt="rockimg"
+              />
             </div>
             <div value="paper">
-              <img class="playersymbol" id="playerpaper" src="paper.png" alt="paperimg" />
+              <img
+                class="playersymbol"
+                id="playerpaper"
+                src="paper.png"
+                alt="paperimg"
+              />
             </div>
             <div value="scissor">
-              <img class="playersymbol" id="playerscissor" src="scissor.png" alt="scissorimg" />
+              <img
+                class="playersymbol"
+                id="playerscissor"
+                src="scissor.png"
+                alt="scissorimg"
+              />
             </div>
           </div>
           <h3></h3>
@@ -39,18 +54,28 @@
           <div class="playsymbols">
             <div></div>
             <div>
-              <img id="cpusymbol" src="scissor.png" alt="cpusymbol"/>
+              <img id="cpusymbol" src="scissor.png" alt="cpusymbol" />
             </div>
             <div></div>
           </div>
         </div>
       </div>
+      <div class="chosensymbol">
+        <div>
+          <h1>You chose: <span id="playerchoice"></span></h1>
+        </div>
+        <div id="roundresult"></div>
+        <div>
+          <h1>CPU chose: <span id="cpuchoice"></span></h1>
+        </div>
+
+      </div>
       <div class="scorebox">
         <h1 id="scoreplayer">0</h1>
-        <div id="roundresult"></div>
+        <div id="drawstext">Draws: <span id="drawsnumber">0</span></div>
         <h1 id="scorecpu">0</h1>
       </div>
-      <div class="resetbuttondiv" id="resetbutton" >
+      <div class="resetbuttondiv" id="resetbutton">
         <h3>Reset</h3>
       </div>
     </div>
