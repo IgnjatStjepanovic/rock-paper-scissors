@@ -22,13 +22,13 @@
           <h1>Player 1</h1>
           <div class="playsymbols">
             <div value="rock">
-              <img id="playerrock" src="rock.png" alt="rockimg" />
+              <img class="playersymbol" id="playerrock" src="rock.png" alt="rockimg" />
             </div>
             <div value="paper">
-              <img id="playerpaper" src="paper.png" alt="paperimg" />
+              <img class="playersymbol" id="playerpaper" src="paper.png" alt="paperimg" />
             </div>
             <div value="scissor">
-              <img id="playerscissor" src="scissor.png" alt="scissorimg" />
+              <img class="playersymbol" id="playerscissor" src="scissor.png" alt="scissorimg" />
             </div>
           </div>
           <h3></h3>
@@ -36,17 +36,24 @@
         <div class="statusinmiddle">VS</div>
         <div id="cpuplayer" class="whitebox">
           <h1 id="gamename">CPU player</h1>
+          <div class="playsymbols">
+            <div></div>
+            <div>
+              <img id="cpusymbol" src="scissor.png" alt="cpusymbol"/>
+            </div>
+            <div></div>
+          </div>
         </div>
       </div>
       <div class="scorebox">
-          <h1>0</h1>
-          <div></div>
-          <h1>0</h1>
+        <h1 id="scoreplayer">0</h1>
+        <div id="roundresult"></div>
+        <h1 id="scorecpu">0</h1>
       </div>
-      <div class="resetbuttondiv">
-          <h3>Reset</h3>
+      <div class="resetbuttondiv" id="resetbutton" >
+        <h3>Reset</h3>
       </div>
     </div>
     <script type="text/javascript" src="app.js"></script>
-  </body>  
+  </body>
 </html>
