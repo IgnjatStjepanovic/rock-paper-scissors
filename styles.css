@@ -57,11 +57,19 @@ body {
   margin: auto;
 }
 
-.whitebox {
+.whiteboxplayer {
   background-color: white;
   border-radius: 20px;
   margin: 0 10px;
 }
+
+.whiteboxcpu {
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 10px;
+}
+
+
 
 .statusinmiddle {
   display: flex;

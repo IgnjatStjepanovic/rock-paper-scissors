@@ -96,6 +96,11 @@ function game(userChoice) {
     let drawsint = parseInt(draws.innerHTML);
     draws.innerHTML = drawsint + 1;
     document.getElementById("roundresult").innerHTML = "Draw!";
+    document.getElementById('drawstext').style.color = "green";
+    setTimeout(myTimer, 150);
+    function myTimer () {
+      document.getElementById('drawstext').style.color = "white";
+    } 
   }
 
   if (checker == 1) {
@@ -103,20 +108,30 @@ function game(userChoice) {
     let current = parseInt(scoreplayer.innerHTML);
     scoreplayer.innerHTML = current + 1;
     document.getElementById("roundresult").innerHTML = "You win!";
+    document.getElementById('humanplayer').style.background = "green";
+    setTimeout(myTimer, 150);
+    function myTimer () {
+      document.getElementById('humanplayer').style.background = "white";
+    }   
   }
 
   if (checker == 2) {
     let scorecpu = document.getElementById("scorecpu");
     let current = parseInt(scorecpu.innerHTML);
     scorecpu.innerHTML = current + 1;
-    document.getElementById("roundresult").innerHTML = "CPU wins!";
+    document.getElementById("roundresult").innerHTML = "CPU wins!";    
+    document.getElementById('cpuplayer').style.background = "green";
+    setTimeout(myTimer, 150);
+    function myTimer () {
+      document.getElementById('cpuplayer').style.background = "white";
+    }
   }
 
   let currentRound = document.getElementById("roundnumber");
   let currentRoundParsed = parseInt(currentRound.innerHTML);
   currentRound.innerHTML = currentRoundParsed + 1;
 
-  if (currentRoundParsed > 14) {
+  if (currentRoundParsed >= 14) {
     let scorecpu = document.getElementById("scorecpu");
     let scoreplayer = document.getElementById("scoreplayer");
     let currentcpu = parseInt(scorecpu.innerHTML);
@@ -133,9 +148,6 @@ function game(userChoice) {
     if (currentcpu == currentplayer) {
       document.getElementById("roundtitle").innerHTML = "It's a draw! Press Reset to start again";
     }
-
-
-
 
   }
 }
