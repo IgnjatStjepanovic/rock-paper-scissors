@@ -96,10 +96,10 @@ function game(userChoice) {
     let drawsint = parseInt(draws.innerHTML);
     draws.innerHTML = drawsint + 1;
     document.getElementById("roundresult").innerHTML = "Draw!";
-    document.getElementById('drawstext').style.color = "green";
+    document.getElementById('drawstext').style.background = "#6fe15a";
     setTimeout(myTimer, 150);
     function myTimer () {
-      document.getElementById('drawstext').style.color = "white";
+      document.getElementById('drawstext').style.background = "";
     } 
   }
 
@@ -108,7 +108,7 @@ function game(userChoice) {
     let current = parseInt(scoreplayer.innerHTML);
     scoreplayer.innerHTML = current + 1;
     document.getElementById("roundresult").innerHTML = "You win!";
-    document.getElementById('humanplayer').style.background = "green";
+    document.getElementById('humanplayer').style.background = "#6fe15a";
     setTimeout(myTimer, 150);
     function myTimer () {
       document.getElementById('humanplayer').style.background = "white";
@@ -120,7 +120,7 @@ function game(userChoice) {
     let current = parseInt(scorecpu.innerHTML);
     scorecpu.innerHTML = current + 1;
     document.getElementById("roundresult").innerHTML = "CPU wins!";    
-    document.getElementById('cpuplayer').style.background = "green";
+    document.getElementById('cpuplayer').style.background = "#6fe15a";
     setTimeout(myTimer, 150);
     function myTimer () {
       document.getElementById('cpuplayer').style.background = "white";
@@ -138,16 +138,18 @@ function game(userChoice) {
     let currentplayer = parseInt(scoreplayer.innerHTML);
 
     if (currentcpu > currentplayer) {
-      document.getElementById("roundtitle").innerHTML = "CPU is the winner! Press Reset to start again";
+      document.getElementById("roundtitle").innerHTML = "CPU WINS! Press Reset to play again";
     }
 
     if (currentcpu < currentplayer) {
-      document.getElementById("roundtitle").innerHTML = "You are the winner! Press Reset to start again";
+      document.getElementById("roundtitle").innerHTML = "YOU WIN! Press Reset to play again";
     }
 
     if (currentcpu == currentplayer) {
-      document.getElementById("roundtitle").innerHTML = "It's a draw! Press Reset to start again";
+      document.getElementById("roundtitle").innerHTML = "IT'S A DRAW! Press Reset to play again";
     }
+
+    document.getElementById('playingfield').style.pointerEvents = 'none';
 
   }
 }
